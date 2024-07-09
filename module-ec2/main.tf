@@ -21,7 +21,7 @@ resource "aws_security_group" "allow_http" {
   vpc_id      = aws_vpc.AFT-Test.id
 }
 # Create aws ec2 instance for the app server
-resource "aws_instance" "my_app_server" {
+resource "aws_instance" "AFT-TestInstance1r" {
   ami                    = var.ami_id
   instance_type          = var.instance
   vpc_security_group_ids = [aws_security_group.allow_http.id]
