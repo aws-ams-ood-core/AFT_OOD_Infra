@@ -1,4 +1,4 @@
-resource "aws_vpc" "AFT-Test" {
+resource "aws_vpc" "TestVPC" {
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
   tags = {
