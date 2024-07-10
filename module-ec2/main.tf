@@ -7,7 +7,7 @@ resource "aws_vpc" "TestVPC" {
 }
 
 resource "aws_subnet" "public_subnet" {
-  vpc_id                  = aws_vpc.AFT-Test.id
+  vpc_id                  = aws_vpc.TestVPC.id
   cidr_block              = var.cidr
   availability_zone       = var.az
   map_public_ip_on_launch = true
@@ -18,7 +18,7 @@ resource "aws_subnet" "public_subnet" {
 resource "aws_security_group" "allow_http" {
   name        = "allow-http"
   description = "Allow http inbound traffic"
-  vpc_id      = aws_vpc.AFT-Test.id
+  vpc_id      = aws_vpc.TestVPC.id
 }
 # Create aws ec2 instance for the app server
 resource "aws_instance" "AFT-TestInstance1r" {
