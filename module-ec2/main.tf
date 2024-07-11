@@ -34,5 +34,6 @@ resource "aws_instance" "AFT-TestInstance1r" {
   subnet_id              = data.aws_subnet.selected.id
   tags = {
     Name = "EC2-TerraformTest-Server"
+    Env = "Test"
   }
 }
