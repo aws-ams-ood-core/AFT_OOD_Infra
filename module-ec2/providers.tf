@@ -7,6 +7,8 @@ terraform {
       version = "~> 3.27"
     }
   }
+  backend "s3" {
+  }
 }
 
 # Configure the AWS Provider
