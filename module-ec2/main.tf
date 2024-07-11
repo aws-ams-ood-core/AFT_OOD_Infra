@@ -14,15 +14,7 @@ data "aws_subnet" "selected" {
 data "aws_ami" "windows-ami" {
   filter {
     name = "name"
-    values = ["Windows_Server-2019-English-Full-Base2021*"]
-  }
-  filter {
-    name = "platform"
-    values = ["Windows"]
-  }
-  filter {
-    name = "virtualization-type"
-    values = ["hvm"]
+    values = ["Windows_Server-2019-English-Full-Base-*"]
   }
   most_recent = true
   owners = ["amazon"]
