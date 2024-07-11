@@ -13,7 +13,7 @@ data "aws_subnet" "selected" {
 
 data "aws_ami" "windows-ami" {
   filter {
-    name "name"
+    name = "name"
     values = ["Windows_Server-2019-English-Full-Base2021*"]
   }
   filter {
