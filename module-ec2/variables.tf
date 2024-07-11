@@ -5,11 +5,6 @@ variable "aws_region" {
   type        = string
   default     = "us-east-1"
 }
-# Create variable for ami-id
-variable "ami_id" {
-  type    = string
-  default = "ami-060a6d981e7de689d"
-}
 # Create variable for instance type
 variable "instance" {
   type    = string
